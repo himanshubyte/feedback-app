@@ -9,23 +9,33 @@ const comments=[
   {id:2, text:'Comment two'},
   {id:3, text:'Comment three'}
 ]
+
+const showComments=true;
+
+const CommentBlock=(
+<div className="container">
+
+
+<div className="comments">
+  <h4>Comments({comments.length })</h4>
+  <ul>
+  {comments.map((comment,index)=>(
+      <li key={index} >{comment.text}</li>
+  ))}
+  </ul>
+</div>
+</div>
+)
 //map returns jsx 
 //!comment.map(()=>())
 
   return (
-    <div className="container">
-      <h1>{title.toUpperCase()}</h1>
-      <p>{body}</p>
-      
-      <div className="comments">
-        <h4>Comments({comments.length })</h4>
-        <ul>
-        {comments.map((comment,index)=>(
-            <li key={index} >{comment.text}</li>
-        ))}
-        </ul>
-      </div>
+    <div className="main">
+          <h1>{title.toUpperCase()}</h1>
+          <p>{body}</p>
+   {showComments && CommentBlock}
     </div>
+
   );
 };
 
