@@ -1,10 +1,13 @@
-import "./App.css";
-
 const App = () => {
+//variables and funnctions above return()
+
+const title="Blog Post"
+const body="This is my blog post"
+
   return (
     <div className="one">
-      <h1>My App</h1>
-      <p>This is a test App</p>
+      <h1>{title}</h1>
+      <p>{body}</p>
     </div>
   );
 };
